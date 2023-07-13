@@ -17,8 +17,13 @@ A schematic overview of this set-up can be seen below:
 To deploy the LDES client on Azure:
 
 1. Modify `variables.tf` to choose the LDES Server you want to follow, add your user principal id (needed to access the data in the Analytics Workspace, ...)
-2. Run `terraform init`.
-3. Run `terraform apply`.
+2. Create a file `secret.tfvars` and store the database username and database password
+```
+db_username = "postgres"
+db_password = "DemoVSDS123!"
+```
+3. Run `terraform init`.
+3. Run `terraform apply -var-file="secret.tfvars"`.
 4. Verify that the Azure Container App is Running and that members are written out to Azure Blob Storage
 
 ### Creation of a Power BI report
