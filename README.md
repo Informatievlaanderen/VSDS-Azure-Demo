@@ -23,8 +23,8 @@ db_username = "postgres"
 db_password = "DemoVSDS123!"
 ```
 3. Run `terraform init`.
-3. Run `terraform apply -var-file="secret.tfvars"`.
-4. Verify that the Azure Container App is Running and that members are written out to Azure Blob Storage
+4. Run `terraform apply -var-file="secret.tfvars"`.
+5. Verify that the Azure Container App is Running and that members are written out to Azure Blob Storage
 
 ### Creation of a Power BI report
 
@@ -52,3 +52,11 @@ FROM
 
 4. Open Power BI and Connect to the created database (using the Serverless SQL Endpoint): `synapseclient-ondemand.sql.azuresynapse.net`
 5. Load the data and create a report
+
+## Removal of resources
+
+Run the following command to delete all resources related to the demo:
+
+```
+terraform destroy -var-file="secret.tfvars"
+```

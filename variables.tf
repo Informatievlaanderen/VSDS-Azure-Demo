@@ -5,7 +5,8 @@ variable "ldes" {
 
 variable "user_principal_id" {
   type = string
-  default = "aee5b661-6d8c-4996-bcc2-53d4f1401de4"
+  default = "aee5b661-6d8c-4996-bcc2-53d4f1401de4" #WOUTER
+#  default = "fa70612d-08f7-444e-9a69-5b3dba8e1820" #JAN
 }
 
 variable "location" {
